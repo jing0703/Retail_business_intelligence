@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Team-5 Members</title>
+
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+
+    <!-- Custom styles for this template -->
+    <!-- <link href="css/round-about.css" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/round-about.css') }}">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">WineFlask</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="/">Welcome
+                    <span class="sr-only">(current)</span>
+                  </a>
+                </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Team Introduction</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/project">Project</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/dashboard">DashBoard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/businessstats">Business Stats</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Introduction Row -->
+      <h1 class="my-4">Meet Our Team</h1>
+        <!-- <small>Portfolio</small> -->
+
+      <!-- Team Members Row -->
+      <div class="row">
+        <div class="col-lg-12">
+        </div>
+        <div class="col-lg-4 col-sm-6 text-center mb-4">
+          <img class="rounded-circle img-fluid d-block mx-auto" src="{{url_for('static', filename='img/jing.jpg')}}" alt="">
+          <h3>Jing 
+            <small>(Progammer)</small>
+          </h3>
+          <p>Jing worked on scapping wines Search website and gathered the information and stored it in Mongo Database. Also worked on the Filter Search Script</p>
+        </div>
+        <div class="col-lg-4 col-sm-6 text-center mb-4">
+          <img class="rounded-circle img-fluid d-block mx-auto" src="{{url_for('static', filename='img/cloude.jpg')}}" alt="">
+          <h3>Claude
+            <small>(Progammer)</small>
+          </h3>
+          <p>Worked on Leaflet and help bringing all the store location on map</p>
+        </div>
+        <div class="col-lg-4 col-sm-6 text-center mb-4">
+          <img class="rounded-circle img-fluid d-block mx-auto" src="{{url_for('static', filename='img/ketal.jpg')}}" alt="">
+          <h3>Ketal
+            <small>(Programmer)</small>
+          </h3>
+          <p>Worked on scapping Information from Vivano Website and scapped important information and stored that in Mongo Database</p>
+        </div>
+        <div class="col-lg-4 col-sm-6 text-center mb-4">
+          <img class="rounded-circle img-fluid d-block mx-auto" src="{{url_for('static', filename='img/heerak.jpg')}}" alt="">
+          <h3>Heerak
+            <small>(Programmer)</small>
+          </h3>
+          <p>Worked entirely on all module and embedding all the codes together and make it a working model which functions the ways it is suppose to work</p>
+        </div>
+        <div class="col-lg-4 col-sm-6 text-center mb-4">
+          <img class="rounded-circle img-fluid d-block mx-auto" src="{{url_for('static', filename='img/waqas.jpg')}}" alt="">
+          <h3>Waqas
+            <small>(Programmer/Designer)</small>
+          </h3>
+          <p>Worked on the small portion of getting the store information and distance through google Distance Matrix API and also worked on designing the Webpages and </p>
+        </div>
+      </div>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Project-Team-5 @ Rutgers Data Science Boot Camp</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- <script src="vendor/jquery/jquery.min.js"></script> -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+
+    <!-- <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+
+  </body>
+
+</html>

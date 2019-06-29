@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Project</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/carousel.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/round-about.css') }}">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">WineFlask</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="/">Welcome
+                    <span class="sr-only">(current)</span>
+                  </a>
+                </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/teamintro">Team Introduction</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Project</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/dashboard">DashBoard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/businessstats">Business Stats</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Introduction Row -->
+        <h1 class="my-4">Project Description</h1>
+        <p>This Project is designed for business analysis which provides useful information regarding Wines data. The data based on scapped information from two different wines websites and make a comparioson with existing database and provide price comparioson also provide the locations of the other stores selling the product and how close are those stores in 5 miles and 10 miles radius along with the locations on Map</p>
+
+
+        <!-- START THE FEATURETTES -->
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">The Road Map. <span class="text-muted">Creating the Architecture of Project.</span></h2>
+                <p class="lead">Before we got started, it was crutial to make a map of our road ahead.</p>
+                <p class="lead">What modules and code will be needed and what will we be using. What will be front end (HTML, CSS, JS), Flask as middle layer, whats on the back end (Mongo, MySql)</p>
+                <p class="lead">MySql . Python . SQL-Alchemy . BeautifulSoup(Scrape) . Google API . MongoDB . Flask . HTML . JavaScript . D3 . Leaflet</p>
+
+            </div>
+            <div class="col-md-5 order-md-1 center-img">
+                <img class="featurette-image img-fluid mx-auto" src="{{url_for('static', filename='img/layers.png')}}" alt="Generic placeholder image">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">Database Migration. <span class="text-muted">Microsoft SQL Server -> MySQL.</span></h2>
+                <p class="lead">Database was originally in Microsoft SQL Server, so importing it to MySQL was the first step.</p>
+                <p class="lead">This required taking the Schema and Data and copying it to MySql.</p>
+                <p class="lead"><strong>Key Challanges: </strong>Before importing to MySql, we had to clean out "garbage" information. Otherwise data was not importing.</p>
+
+            </div>
+            <div class="col-md-5 center-img">
+                <img class="featurette-image img-fluid mx-auto" src="{{url_for('static', filename='img/DataBase.png')}}" alt="Generic placeholder image">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">Garbage to Gold. <span class="text-muted">The SQL-Alchemists.</span></h2>
+                <p class="lead">Once the Database was set up, we had to connect to it using Python.</p>
+                <p class="lead">This allows us to referance the database, while Flask is running.</p>
+                <p class="lead"><strong>Key Challanges: </strong>Getting Automap to work streamlessly was a roadblock, we first created the classes for each table, but that was not sustainible as we bring in more tables. Solved this with some hard GoogleFu.</p>
+
+            </div>
+            <div class="col-md-5 order-md-1 center-img">
+                <img class="featurette-image img-fluid mx-auto" src="{{url_for('static', filename='img/mysqlsetup.png')}}" alt="Generic placeholder image">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">Scrape and Store. <span class="text-muted">Beautiful Soup with a side of Mongo.</span></h2>
+                <p class="lead">We knew that we wanted our application to be used for price comparison, so gaining prices from outside sources was key.</p>
+                <p class="lead">We chose to scrape Wine Searcher, the standard in alcoholic beverages for information on products</p>
+                <p class="lead"><strong>Key Challange: </strong>Many wines excluded some information, such as score and pairing. This prevented script from completing.... We also got our IP address blocked. So that was fun too.</p>
+                <p class="lead"><strong>Solution: </strong>Simple Try & Except methods worked for us. Oh and a VPN connection.</p>
+
+            </div>
+            <div class="col-md-5 center-img">
+                <img class="featurette-image img-fluid mx-auto" src="{{url_for('static', filename='img/scrape.png')}}" alt="Generic placeholder image">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">The Middle Brain. <span class="text-muted">Flask with some Wine .. Wine+Flask.</span></h2>
+                <p class="lead">Flask is 'pulling the strings', its the link to what information is in database and what we see on the front end.</p>
+                <p class="lead"><strong>Key Challanges: </strong>What routes will we need, and how is it going to get the information from front end, and link it to back end. We first tried having SQLite to pull and store information for quicker use. But it adds an extra step</p>
+                <p class="lead"><strong>Solution: </strong>Global Variables throughout Flask App. Once a form gets "POST"ed it sends the variable over to routes to run queries, which then get returned as json for future access.</p>
+
+            </div>
+            <div class="col-md-5 order-md-1 center-img">
+                <img class="featurette-image img-fluid mx-auto" src="{{url_for('static', filename='img/flask.png')}}" alt="Generic placeholder image">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">Introduce Interactivity. <span class="text-muted">JavaScripting with D3.</span></h2>
+                <p class="lead">With a base HTML script, we went into the creating buttons, dropdowns, and filters to make the interactive dashboard.</p>
+                <p class="lead">Using forms, we were able to push information to Flask App, and then using JS create the content of the dashboard</p>
+                <p class="lead"><strong>Key Challange: </strong>In order for the search information to be used, it had to be "POST"ed to Flask, but that only happened on submiting. So finding a way to submit "onclick" was super crutial.</p>
+                <p class="lead"><strong>Solution: </strong>We were forced to go outside our class scope and use JQuery and Ajax. This allowed the POST functionality to occcur at the right times and create great speeds of information flow between user input, Flask, and backend querying.</p>
+
+            </div>
+            <div class="col-md-5 center-img">
+                <img class="featurette-image img-fluid mx-auto" src="{{url_for('static', filename='img/modal.gif')}}" alt="Generic placeholder image">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">Graphing the Information 1. <span class="text-muted">Marked on Leaflet.</span></h2>
+                <p class="lead">In order to display valued information, a Leaflet map showing store location and pricing was added to the Dashboad.</p>
+                <p class="lead">For the markers to be displayed, coordinated were needed. So instead of adding coordinates here, we used Google API during the scrape to collect coordinates of competitor store and then refrance them here.</p>
+                <p class="lead"><strong>Key Challanges: </strong>We created a custom icon, but were having a problem keeping the flag at its position as we zoomed in and out</p>
+                <p class="lead"><strong>Solution: </strong>With some research and trial/error, we got it to anchor at the "Our Store" coordinate.</p>
+
+            </div>
+            <div class="col-md-5 order-md-1 center-img">
+                <img class="featurette-image img-fluid mx-auto" src="{{url_for('static', filename='img/map.png')}}" alt="Generic placeholder image">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">Graphing Information 2. <span class="text-muted">D3'ed on Bars.</span></h2>
+                <p class="lead">Along with item information, the Dashboard should also give more insight on to the business.</p>
+                <p class="lead">The only information we transfered from original database for this project was department, category, and quantity. So we were somewhat limited on information.</p>
+                <p class="lead"><strong>Key Challange: </strong>To make the graphs more interactive, and change on click or mouseover. </p>
+                <p class="lead"><strong>Solution: </strong>Trial and Error, we stuck with what worked. With more time, our focus can be towards taking sales/transaction data and displaying associated graphs.</p>
+
+            </div>
+            <div class="col-md-5 center-img">
+                <img class="featurette-image img-fluid mx-auto" src="{{url_for('static', filename='img/bargraph.gif')}}" alt="Generic placeholder image">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">Beauty is in the Eye of the Beholder. <span class="text-muted">Long live Bootstrap.</span></h2>
+                <p class="lead">After everything was functioning the way it was meant to, and results were created, it was time to prettify everything.</p>
+                <p class="lead">We used bootstrap templates and examples to guide us and act as starting points.</p>
+                <p class="lead">Many parts had to be customized, hence we had to add our own CSS codes to some files.</p>
+                <p class="lead"><strong>Key Challanges: </strong>Linking the files downloaded with bootstrap themes so they can be read with flask. Sticky-sidebar was kinda sticky, and time was running out. We dialed the help hotline, they hung up on us.</p>
+                <p class="lead"><strong>Solution: </strong>Self tought GoogleFu and the art of Copy/Paste. Lots of side topics. Lots of laughs. Lots of coffee.</p>
+
+            </div>
+            <div class="col-md-5 order-md-1 center-img">
+                <img class="featurette-image img-fluid mx-auto" src="{{url_for('static', filename='img/wineflask.png')}}" alt="Generic placeholder image">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">Keep calm and carry on. <span class="text-muted">Powering Through.</span></h2>
+                <p class="lead">What's life without some fun.</p>
+                <p class="lead"><strong>Disclaimer: </strong>This is purely for only academic use. Any assosication with the team and team members can only be made via appointment, unless complimented with a bottle of wine. We promise we are not drunkards.</p>
+                <p class="lead"><strong>Solution: </strong>Enjoy.  :)</p>
+
+            </div>
+            <div class="col-md-5 center-img">
+                <img class="featurette-image img-fluid mx-auto" src="{{url_for('static', filename='img/grouppic.jpg')}}" alt="Generic placeholder image">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+        <!-- /END THE FEATURETTES -->
+                
+
+
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Project-Team-5 @ Rutgers Data Science Boot Camp</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+
+  </body>
+
+</html>
+
+
+<!-- <img src="{{url_for('static', filename='blahblah.jpg')}}" /> -->
